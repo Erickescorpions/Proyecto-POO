@@ -1,7 +1,6 @@
-package meetto.ventana_grafica.muro;
+package clases.ventana_grafica.muro;
 
 import java.io.Serializable;
-
 
 public class Publicaciones implements Serializable {
 
@@ -17,6 +16,7 @@ public class Publicaciones implements Serializable {
         this.d = new Datos().datos_fecha();
     }
 
+     
     public Publicaciones( String u, String amigo, String p) {
 
         this.u = u;

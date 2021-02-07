@@ -1,4 +1,4 @@
-package meetto.serializar;
+package clases.serializar;
 
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
@@ -11,8 +11,8 @@ import java.io.ObjectInputStream;
 import java.util.HashMap;
 import java.util.Map;
 
-import meetto.usuarios.Usuario;
-import meetto.controlador.Controlador;
+import clases.usuarios.Usuario;
+import clases.controlador.Controlador;
 
 public class Serializacion {
 

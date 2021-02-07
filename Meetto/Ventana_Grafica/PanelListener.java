@@ -1,4 +1,4 @@
-package meetto.ventana_grafica;
+package clases.ventana_grafica;
 
 import java.util.EventListener;
 import javax.swing.JPanel;

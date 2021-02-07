@@ -1,8 +1,8 @@
-package meetto.usuarios;
+package clases.usuarios;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import meetto.ventana_grafica.muro.Publicaciones;
+import clases.ventana_grafica.muro.Publicaciones;
 
 public class Usuario implements Serializable {
 

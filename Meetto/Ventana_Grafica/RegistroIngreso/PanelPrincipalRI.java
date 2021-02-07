@@ -1,8 +1,7 @@
-package meetto.ventana_grafica.registro_ingreso;
+package clases.ventana_grafica.registro_ingreso;
 
-import meetto.controlador.Controlador;
-//import meetto.ventana_grafica.registro_ingreso.PanelIngreso;
-import meetto.ventana_grafica.PanelListener;
+import clases.controlador.Controlador;
+import clases.ventana_grafica.PanelListener;
 
 
 import javax.swing.JPanel;
@@ -40,7 +39,7 @@ public class PanelPrincipalRI extends JPanel implements ActionListener, Operacio
 
     Controlador c;
 
-    public PanelPrincipalRI( Controlador c) {
+    public PanelPrincipalRI( Controlador c ) {
         
         this.setBackground( Color.WHITE ); //Establecemos el color del panel
         this.setLayout( new BorderLayout( 10, 10 ) );

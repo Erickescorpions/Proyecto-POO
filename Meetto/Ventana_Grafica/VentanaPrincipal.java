@@ -1,4 +1,4 @@
-package meetto.ventana_grafica;
+package clases.ventana_grafica;
 
 import java.awt.Color;
 
@@ -11,10 +11,10 @@ import javax.swing.JScrollPane;
 import javax.swing.text.ComponentView;
 import javax.swing.text.AttributeSet.ColorAttribute;
 
-import meetto.ventana_grafica.datos_personales.PanelPrincipalD;
-import meetto.ventana_grafica.registro_ingreso.PanelPrincipalRI;
-import meetto.ventana_grafica.muro.*;
-import meetto.controlador.Controlador;
+import clases.ventana_grafica.datos_personales.PanelPrincipalD;
+import clases.ventana_grafica.registro_ingreso.PanelPrincipalRI;
+import clases.ventana_grafica.muro.*;
+import clases.controlador.Controlador;
 
 public class VentanaPrincipal extends JFrame implements PanelListener {
     

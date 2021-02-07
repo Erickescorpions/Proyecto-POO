@@ -1,7 +1,7 @@
-package meetto.ventana_grafica.registro_ingreso;
+package clases.ventana_grafica.registro_ingreso;
 
-import meetto.controlador.Controlador;
-import meetto.usuarios.Usuario;
+import clases.controlador.Controlador;
+import clases.usuarios.Usuario;
 
 //Interfacex graficas
 import javax.swing.JPanel;

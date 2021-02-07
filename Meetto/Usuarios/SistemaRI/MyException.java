@@ -1,4 +1,4 @@
-package meetto.usuarios.sistema_ri;
+package clases.usuarios.sistema_ri;
 
 import java.lang.Exception;
 

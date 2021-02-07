@@ -1,9 +1,9 @@
-package meetto.ventana_grafica.datos_personales;
+package clases.ventana_grafica.datos_personales;
 
-import meetto.usuarios.Usuario;
-import meetto.usuarios.sistema_ri.Sistema;
-import meetto.ventana_grafica.PanelListener;
-import meetto.controlador.Controlador;
+import clases.usuarios.Usuario;
+import clases.usuarios.sistema_ri.Sistema;
+import clases.ventana_grafica.PanelListener;
+import clases.controlador.Controlador;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;

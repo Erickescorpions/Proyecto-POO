@@ -1,4 +1,4 @@
-package meetto.ventana_grafica.muro;
+package clases.ventana_grafica.muro;
 
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -28,8 +28,8 @@ import java.util.List;
 import javax.swing.JList;
 import javax.swing.JTextField;
 
-import meetto.controlador.Controlador;
-import meetto.ventana_grafica.PanelListener;
+import clases.controlador.Controlador;
+import clases.ventana_grafica.PanelListener;
 
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;

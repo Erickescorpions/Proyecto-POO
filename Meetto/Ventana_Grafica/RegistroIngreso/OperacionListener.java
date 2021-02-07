@@ -1,4 +1,4 @@
-package meetto.ventana_grafica.registro_ingreso;
+package clases.ventana_grafica.registro_ingreso;
 
 import java.util.EventListener;
 

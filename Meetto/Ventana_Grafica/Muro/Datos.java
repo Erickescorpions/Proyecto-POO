@@ -1,4 +1,4 @@
-package meetto.ventana_grafica.muro;
+package clases.ventana_grafica.muro;
 
 import java.time.LocalTime;
 import java.time.LocalDate;

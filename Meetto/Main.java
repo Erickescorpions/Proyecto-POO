@@ -1,8 +1,8 @@
-package meetto;
+package clases;
 
-import meetto.ventana_grafica.VentanaPrincipal;
-import meetto.serializar.Serializacion;
-import meetto.controlador.Controlador;
+import clases.ventana_grafica.VentanaPrincipal;
+import clases.serializar.Serializacion;
+import clases.controlador.Controlador;
 
 import java.awt.*; 
 import java.awt.event.WindowEvent;
