@@ -1,0 +1,5 @@
+Instruccion de compilacion:
+javac -d . Meetto/Main.java Meetto/Controlador/Controlador.java Meetto/Serializar/Serializacion.java Meetto/Usuarios/Usuario.java Meetto/Usuarios/SistemaRI/*.java Meetto/Ventana\ Grafica/DatosPersonales/PanelPrincipalD.java Meetto/Ventana\ Grafica/Muro/*.java Meetto/Ventana\ Grafica/RegistroIngreso/*.java Meetto/Ventana\ Grafica/*.java
+
+Instruccion de ejecucion:
+java meetto.Main
