@@ -13,15 +13,27 @@ import java.util.Collection;
 
 public class Controlador {
     
+	//Campos de la clase
     public Usuario u = new Usuario();
     public Sistema s;
     public Usuario amigo = new Usuario();
     public Collection<Usuario> usuarios_registrados;
 
+
     public Controlador() {
         this.s = new Sistema();
     }
-
+    
+    /**
+     * Invoca el metodo 'Registrar' de la clase Sistema y si el registo fue
+     * exitoso, guarda a el usuario para su uso posterior
+     * @param nombre Variable que contiene el nombre del usuario
+     * @param edad Variable que contiene la edad del usuario
+     * @param email Variable que contiene el email del usuario
+     * @param password Variable que contiene el password del usuario
+     * @param repPassword Variable que contiene la confirmacion del password del usuario
+     * @return Una referencia a un objeto
+     */
     public Object Registro( String nombre, int edad, String email, String password, String repPassword ) {
 
         Object ob = this.s.Registrar( nombre, edad, email, password, repPassword );
@@ -29,12 +41,18 @@ public class Controlador {
         if( ob instanceof Usuario ) {
 
             this.u = (Usuario) ob;
-            System.out.println("hecho, usuario en el sistema " + this.u);
         }
 
         return ob;
     }
-
+    
+    /**
+     * Invoca el metodo 'Ingresar' de la clase Sistema y si el registo fue
+     * exitoso, guarda a el usuario para su uso posterior
+     * @param email Variable que contiene el email
+     * @param password Variable que contiene el password
+     * @return Una referencia a un objeto
+     */
     public Object Ingreso( String email, String password ) {
 
         Object ob = this.s.Ingresar( email, password );
@@ -46,12 +64,12 @@ public class Controlador {
 
         return ob;
     }
-
-    public String getImagen() {
-
-        return this.u.getImagen(); 
-    }
-
+    
+    /**
+     * Cambia la foto de un usuario
+     * @param f Un archivo
+     * @return La ruta de la foto
+     */
     public String CambiarFoto( File f ) {
 
         String ruta = CopiarImagen( f );
@@ -60,12 +78,17 @@ public class Controlador {
 
         return ruta;
     }
-
+    
+    /**
+     * Copia la imagen que el usuario quiere ingresar en un archivo local
+     * @param f Un archivo
+     * @return La ruta de la foto
+     */
     private String CopiarImagen( File f ) {
 
         String ruta = f.getAbsolutePath();
         String[] name = ruta.split("/");
-        String nameCopy = "Meetto/Imagenes/" + name[ name.length - 1 ];
+        String nameCopy = "src/Imagenes/" + name[ name.length - 1 ];
 
         try {
 
@@ -88,18 +111,24 @@ public class Controlador {
     
         } catch ( IOException e ) {
 
-            System.out.println( "Error con el archivo");
+            System.out.println("Error con el archivo");
         }   
-
 
         return nameCopy;
     }
-
+    
+    /**
+     * Obtiene una lista de los usuarios registrados en el sistema
+     */
     public void getUsuariosRegistrados() {
         
         this.usuarios_registrados = this.s.getUsuarios().values();
     }
-
+    
+    /**
+     * Obtiene una array de los nombres de los usuarios registrados en el sistema
+     * @return Un array de la lista de usuarios
+     */
     public String[] getNombresUsuariosRegistrados() {
 
         String[] nombres_usuarios = new String[ this.usuarios_registrados.size() - 1 ];
@@ -107,14 +136,20 @@ public class Controlador {
         int i = 0;
         for( Usuario user : this.usuarios_registrados ) {
 
-            if( this.u.getNombre().equals( user.getNombre() ) ) continue;
+            if( this.u.getEmail().equals( user.getEmail() ) ) continue;
             nombres_usuarios[ i ] = user.getNombre();
             i++;
         }
         
         return nombres_usuarios;
     }
-
+    
+    /**
+     * Cambia un dato de la informacion del usuario (nombre o password)
+     * @param arg_1 Uno de los parametros a cambiar
+     * @param arg_2	UNo de los parametros a cambiar
+     * @return Un String del resultado
+     */
     public String CambiarDato( Object arg_1, Object arg_2 ) {
 
         String str = "";
@@ -140,7 +175,11 @@ public class Controlador {
 
         return str;
     }
-
+    
+    /**
+     * Obtiene a un usuario auxiliar 
+     * @param key Es el nombre del usuario que vamos a buscar
+     */
     public void getUsuario( String key ) {
 
         for( Usuario user : this.usuarios_registrados ) {
@@ -152,4 +191,5 @@ public class Controlador {
             }
         }
     }
-}
+    
+} // cierre de la clase

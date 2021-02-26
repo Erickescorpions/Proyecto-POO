@@ -213,6 +213,7 @@ public class PanelPrincipalD extends JPanel implements ActionListener {
         String aux = "";
         for( int i = 0; i < c.u.getPassword().length(); i++ ) aux += "*";
         contrasena.setText("Contrasena: " + aux );
+        System.out.println(c.u.getImagen() );
         ColocarFoto( c.u.getImagen() );
     }   
 

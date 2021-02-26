@@ -177,7 +177,7 @@ public class Panel_Amigo extends JPanel implements ActionListener, ListSelection
             k.gridy = i;
 
             if( !pub.amigo.equals("") ) {
-                String publicador = pub.amigo + " -> " + pub.u; 
+                String publicador = pub.u + " -> " + pub.amigo; 
                 contenedor_publicaciones.add( new JLabel( publicador ), k );
                 i++;
                 k.gridy = i;
@@ -339,7 +339,7 @@ public class Panel_Amigo extends JPanel implements ActionListener, ListSelection
             String aux = caja_p.getText();
             if( !aux.equals("Que estas pensando?") ) {
 
-                this.c.amigo.publicaciones.add( new Publicaciones( this.c.amigo.getNombre(), this.c.u.getNombre(), aux ) );
+                this.c.amigo.publicaciones.add( new Publicaciones( this.c.u.getNombre(), this.c.amigo.getNombre(), aux ) );
                 addPublicaciones();
             }
 
@@ -350,7 +350,7 @@ public class Panel_Amigo extends JPanel implements ActionListener, ListSelection
 
                 File f = fc.getSelectedFile();
                 String ruta = f.getAbsolutePath();
-                this.c.amigo.publicaciones.add( new Publicaciones( this.c.amigo.getNombre(), this.c.u.getNombre(), ruta ) );
+                this.c.amigo.publicaciones.add( new Publicaciones( this.c.u.getNombre(), this.c.amigo.getNombre(), ruta ) );
                 addPublicaciones();
             }
         }

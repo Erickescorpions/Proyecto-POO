@@ -19,6 +19,7 @@ public class Main {
         ob.s = new Serializacion( c );
 
         ob.s.RecuperarUsuarios();
+
         VentanaPrincipal v = new VentanaPrincipal( c );
         v.setVisible( true );
 
@@ -32,6 +33,5 @@ public class Main {
                 System.exit(0);
             }
         });
-
     }
 }

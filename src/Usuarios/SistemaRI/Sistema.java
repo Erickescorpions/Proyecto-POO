@@ -7,14 +7,25 @@ import java.util.InputMismatchException;
 import java.io.Serializable;
 
 public class Sistema implements Serializable {
-
+	
+	//Hash Map donde se almacenan los usuarios registrados < correo, usuario >
     public HashMap<String, Usuario> usuarios;
     
     public Sistema() {
 
         this.usuarios = new HashMap<String, Usuario>( 100 );
     }
-
+    
+    /**
+     * Valida los datos de registro de un usuario y si son correctos
+     * lo registra
+     * @param nombre Variable que almacena el nombre
+     * @param edad Variable que almacena la edad
+     * @param email Variable que almacena el email
+     * @param password Variable que almacena el password
+     * @param repPassword Variable que almacena la confirmacion del password
+     * @return Una referencia a un objeto 
+     */
     public Object Registrar( String nombre, int edad, String email, String password, String repPassword ) {
         
         String str = "";
@@ -65,7 +76,13 @@ public class Sistema implements Serializable {
 
         return str;
     }
-
+    
+    /**
+     * Valida los datos del usuario para dejarlo ingresar al sistema
+     * @param email Variable que almacena el email
+     * @param password Variable que almacena el password
+     * @return Una referencia a un objeto 
+     */
     public Object Ingresar( String email, String password ) {
 
         Usuario u = null;
@@ -80,6 +97,7 @@ public class Sistema implements Serializable {
 
                 u = usuarios.get( email );
                 if( u.getPassword().equals( password ) ) return u;
+                
                 else return "Contraseña incorrecta.";
             } else {
 
@@ -93,12 +111,18 @@ public class Sistema implements Serializable {
             return ci.getMessage();
         } 
     }
-
+    
+    /**
+     * Obtiene los usuarios registrados en el sistema
+     * @return Una referencia a un HashMap<String,Usuario>
+     */
     public HashMap<String, Usuario> getUsuarios() {
         
         return this.usuarios;
     }
 
+    //setters 
+    
     public String setNombre( Usuario u, String nombre ) {
 
         String str = "";

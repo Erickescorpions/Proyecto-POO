@@ -5,7 +5,7 @@ import java.time.LocalDate;
 
 public class Datos{
 	
-	public String hora() {
+	private String hora() {
 
 		LocalTime hora = LocalTime.now();
 		String res = hora.toString();
@@ -16,12 +16,16 @@ public class Datos{
 		return res2;
 	}
 	
-	public String fecha() {
+	private String fecha() {
 
 		LocalDate fechaActual = LocalDate.now(); 
 		return fechaActual.toString();
 	}
-
+	
+	/**
+	 * Obtiene los datos de la fecha y hora del dia
+	 * @return Un string con los datos
+	 */
 	public String datos_fecha() {
 
 		return fecha() + "   " + hora();

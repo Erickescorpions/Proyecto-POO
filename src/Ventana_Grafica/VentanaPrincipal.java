@@ -31,7 +31,6 @@ public class VentanaPrincipal extends JFrame implements PanelListener {
 
         this.setTitle("Meetto"); //Establecemos el titulo de la ventana 
         this.setSize( 900, 900 ); //Establecemos tamano de la ventana 
-        //this.setResizable( false );
         this.setLocationRelativeTo( null ); //Establecemos la ventana en el centro de cualquier pantalla
         this.setDefaultCloseOperation( DO_NOTHING_ON_CLOSE ); //Se termina la ejecuacion del programa al presionar al tache
 
